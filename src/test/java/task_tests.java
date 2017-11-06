@@ -1,10 +1,5 @@
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.junit.*;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class task_tests {
@@ -21,14 +16,14 @@ public class task_tests {
         driver.quit();
     }
 
-    private void checkElementInTopMenuIsDisplayed(By cssSelector ){
-        Assert.assertTrue(getTheTopMenu(By.id("links-site")).findElement(cssSelector).isDisplayed());
+    private void checkElementInTopMenuIsDisplayedByElement(By element) {
+        Assert.assertTrue(getTheTopMenu(By.id("links-site")).findElement(element).isDisplayed());
     }
 
     @Test
     public void test1() {
         System.out.println("Test 1 started");
-checkElementInTopMenuIsDisplayed(By.ByCssSelector("sds"));
+        checkElementInTopMenuIsDisplayedByElement(By.cssSelector(""));
 //    Assert.assertNotNull(driver.findElement(By.id("links-site")).findElements(By.linkText("Home")));
 //    Assert.assertNotNull(driver.findElement(By.id("links-site")).findElements(By.linkText("Subjects")));
 //    Assert.assertNotNull(driver.findElement(By.id("links-site")).findElements(By.linkText("About Wiley")));
@@ -46,7 +41,7 @@ checkElementInTopMenuIsDisplayed(By.ByCssSelector("sds"));
     @Test
     public void test2() {
         System.out.println("Test 2 started");
-   //        Assert.assertNotNull(driver.findElement(By.id("homepage-links")).findElement(By.linkText("Students")));
+        //        Assert.assertNotNull(driver.findElement(By.id("homepage-links")).findElement(By.linkText("Students")));
 //        Assert.assertNotNull(driver.findElement(By.id("homepage-links")).findElement(By.linkText("Authors")));
 //        Assert.assertNotNull(driver.findElement(By.id("homepage-links")).findElement(By.linkText("Instructors")));
 //        Assert.assertNotNull(driver.findElement(By.id("homepage-links")).findElement(By.linkText("Librarians")));
