@@ -1,10 +1,6 @@
 package tests;
 
-import org.junit.After;
-
-import org.junit.Test;
-
-import static tests.homepagemethods.HOME_URL;
+import org.junit.*;
 
 
 public class testrun extends tests.resoursesForStudent {
@@ -56,7 +52,7 @@ public class testrun extends tests.resoursesForStudent {
 
         nextStep("Check that http://www.wiley.com/WileyCDA/Section/id-404702.html url is opened");
 
-      checkCurrentUrl(RESOURSES_STUDENT_URL); // из за региона URL разный. Тест PASS только для региона Americas
+        checkCurrentUrl(RESOURSES_STUDENT_URL); // из за региона URL разный. Тест PASS только для региона Americas
 
 
     }
